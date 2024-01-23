@@ -2,7 +2,8 @@
 ## Unas gotas de ArrayList en Java
 
 ### Introducción
-La clase `ArrayList` en Java es parte del paquete `java.util`. Nos ofrece arrays dinámicos en Java. A diferencia de los arrays tradicionales que tienen un tamaño fijo, un `ArrayList` puede cambiar su tamaño dinámicamente, proporcionando más flexibilidad y utilidad en la programación.
+La clase `ArrayList` en Java es parte del "paquete" `java.util`. Nos ofrece arrays dinámicos en Java. Esto lo matizaremos en breve cuando lleguemos a la O.O. 
+A diferencia de los arrays tradicionales que tienen un tamaño fijo, un `ArrayList` puede cambiar su tamaño dinámicamente, proporcionando más flexibilidad y utilidad en la programación.
 
 ### ¿Por qué ArrayList?
 - **Tamaño Dinámico**: Se redimensiona automáticamente cuando se agregan o eliminan elementos.
@@ -40,6 +41,7 @@ miLista.remove("Hi"); // Elimina "Hi" de la lista
 ```java
 int tamaño = miLista.size();
 ```
+### Revisemos la W3CSchool
 
 ### Ejemplo Práctico: Usar ArrayList en un Programa
 
