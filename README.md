@@ -87,3 +87,61 @@ public class Principal {
 #### Inconvenientes del Array clásico
 - **Tamaño fijo**: Una vez creado, su tamaño no puede cambiar, lo que puede limitar su utilidad.
 - **Menos funcionalidades**: No ofrece métodos incorporados para tareas comunes como añadir o eliminar elementos. Se gestionan mediante índices y el uso de índices puede generar errores.
+
+Un codewars: Transform to Prime. https://www.codewars.com/kata/5a946d9fba1bb5135100007c
+
+import java.util.ArrayList;
+
+public class TransformToPrime {
+
+    public static boolean esPrimo(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int minimumNumber(ArrayList<Integer> numbers) {
+        int suma = 0;
+        for (int num : numbers) {
+            suma += num;
+        }
+        int numeroNecesario = 0;
+        while (!esPrimo(suma + numeroNecesario)) {
+            numeroNecesario++;
+        }
+        return numeroNecesario;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> ejemplo1 = new ArrayList<>();
+        ejemplo1.add(3);
+        ejemplo1.add(1);
+        ejemplo1.add(2);
+
+        ArrayList<Integer> ejemplo2 = new ArrayList<>();
+        ejemplo2.add(2);
+        ejemplo2.add(12);
+        ejemplo2.add(8);
+        ejemplo2.add(4);
+        ejemplo2.add(6);
+
+        ArrayList<Integer> ejemplo3 = new ArrayList<>();
+        ejemplo3.add(50);
+        ejemplo3.add(39);
+        ejemplo3.add(49);
+        ejemplo3.add(6);
+        ejemplo3.add(17);
+        ejemplo3.add(28);
+
+        System.out.println(minimumNumber(ejemplo1)); // Debería devolver 1
+        System.out.println(minimumNumber(ejemplo2)); // Debería devolver 5
+        System.out.println(minimumNumber(ejemplo3)); // Debería devolver 2
+    }
+}
+
