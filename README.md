@@ -90,9 +90,9 @@ public class Principal {
 
 Un codewars: Transform to Prime. https://www.codewars.com/kata/5a946d9fba1bb5135100007c
 
-import java.util.ArrayList;
+    import java.util.ArrayList;
 
-public class TransformToPrime {
+    public class TransformToPrime {
 
     public static boolean esPrimo(int num) {
         if (num <= 1) {
@@ -151,7 +151,7 @@ public class TransformToPrime {
             if (num <= 1) {
                 return false; // Los números menores o iguales a 1 no son primos por definición.
             }
-            for (int i = 2; i < num; i++) { // Iteramos desde 2 hasta num - 1.
+            for (int i = 2; i < num; i++) { // Iteramos desde 2 hasta num.
                 if (num % i == 0) {
                     return false; // Si num es divisible por cualquier número en este rango, no es primo.
                 }
