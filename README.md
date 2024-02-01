@@ -145,3 +145,21 @@ public class TransformToPrime {
     }
 }
 
+- Una versión alternativa que me permite reconocer números primos sería:
+
+        public static boolean esPrimo(int num) {
+            if (num <= 1) {
+                return false; // Los números menores o iguales a 1 no son primos por definición.
+            }
+            for (int i = 2; i < num; i++) { // Iteramos desde 2 hasta num - 1.
+                if (num % i == 0) {
+                    return false; // Si num es divisible por cualquier número en este rango, no es primo.
+                }
+            }
+            return true; // Si no encontramos divisores, entonces el número es primo.
+        }
+
+- Ojo con la siguiente optimización:
+
+- En lugar de comprobar todos los números hasta num para ver si num se puede dividir por ellos, solo comprobamos hasta la raíz cuadrada de num. Esto funciona porque si num tiene un divisor mayor que su raíz cuadrada, entonces necesariamente debe tener un divisor menor que ella, por lo que solo necesitamos buscar hasta la raíz cuadrada para encontrar al menos un divisor si existe.
+
